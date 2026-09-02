@@ -46,5 +46,16 @@
     "image": "images/18cf38d6795445408f9d0313e40734b7.png",
     "link_url": null,
     "active": true
+  },
+  {
+    "id": 9,
+    "target_app": "totally-made-up-app-xyz",
+    "caption": "__adstudio_selftest_image__",
+    "image": "images/f2a26d41911f0abe1373a3a84e0aefc6.png",
+    "link_url": null,
+    "active": true,
+    "starts_at": null,
+    "ends_at": null,
+    "priority": 0
   }
 ]
