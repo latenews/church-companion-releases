@@ -53,7 +53,7 @@
     "caption": "__adstudio_selftest__ (safe to ignore/delete)",
     "image": null,
     "link_url": null,
-    "active": true,
+    "active": false,
     "starts_at": null,
     "ends_at": null,
     "priority": 0
