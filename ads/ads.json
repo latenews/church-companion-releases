@@ -46,5 +46,13 @@
     "image": "images/18cf38d6795445408f9d0313e40734b7.png",
     "link_url": null,
     "active": true
+  },
+  {
+    "id": 9.0,
+    "target_app": "customer-companion-basic-android",
+    "caption": "Ad Studio 연동 테스트 (곧 삭제됨)",
+    "image": "images/18cf38d6795445408f9d0313e40734b7.png",
+    "link_url": null,
+    "active": true
   }
 ]
