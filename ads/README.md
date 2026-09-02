@@ -1,8 +1,8 @@
 # Shared ad feed
 
-Static replacement for the retired `154.66.198.71:8001` ad server (FastAPI + admin tool
-"Driver Guardian Ad Studio"). Served for free over HTTPS via `raw.githubusercontent.com` —
-this repo must stay **public** or client apps can't fetch it without a token.
+Static replacement for the retired `154.66.198.71:8001` ad server (FastAPI backend).
+Served for free over HTTPS via `raw.githubusercontent.com` — this repo must stay
+**public** or client apps can't fetch it without a token.
 
 ## Files
 
@@ -31,13 +31,23 @@ this repo must stay **public** or client apps can't fetch it without a token.
 - `link_url`: `null` if the ad isn't clickable.
 - `active`: set `false` to pull an ad without deleting its row/history.
 
-## Publishing a new ad (manual — the old Ad Studio GUI doesn't write here)
+## Publishing a new ad
 
+**Driver Guardian Ad Studio (recommended)** — the operator Electron GUI was retrofitted
+2026-09-02 to write here directly via the GitHub Contents API instead of the retired VPS.
+Open it, Settings -> set Repository to `latenews/church-companion-releases`, Branch
+`main`, and a GitHub personal access token with write access to this repo (classic PAT
+with `repo` scope, or a fine-grained token scoped to Contents: Read and write on just
+this repo). Every publish/edit/delete becomes one commit here, same as before conceptually
+— just a different backend.
+
+**Manual fallback** — for a one-off edit, or if Ad Studio isn't handy:
 1. Add the image file under `images/`.
 2. Append an entry to `ads.json` (bump `id` past whatever's already there).
 3. `git add -A && git commit -m "..." && git push`
-4. Apps re-fetch on a 5-minute poll (see `POLL_MS` in `adFeed.ts`), so it shows up
-   without needing a new app release.
+
+Either way, apps re-fetch on a 5-minute poll (see `POLL_MS` in `adFeed.ts`), so a new
+ad shows up without needing a new app release.
 
 ## URLs consuming apps use
 
